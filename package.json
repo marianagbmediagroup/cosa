@@ -1,0 +1,47 @@
+{
+  "name": "cosa",
+  "version": "1.0.0",
+  "description": "es una cosa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mariana",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "serve": "^11.3.2",
+    "lint-staged": "^10.0.8",
+    "husky": "^4.2.3",
+    "cross-env": "^5.2.0",
+    "stylelint": "^13.0.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-prettier": "^1.1.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "babel-eslint": "^10.0.3"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
+  }
+}
